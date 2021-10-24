@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// extra: Add option to sort articles by date of publish (DESC / ASC)
+
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Technology from "./components/Technology";
+import Sports from "./components/Sports";
+import './App.css'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <h2>Choose category: </h2><br></br>
+      <Router>
+        <div>
+          <Link to="/technology">Technology</Link>
+          <Link className="sport" to="/sports">Sports</Link>
+        </div>
+        <Switch>
+
+          <Route path="/technology">
+            <Technology />
+          </Route>
+
+          <Route path="/sports">
+            <Sports />
+          </Route>
+
+        </Switch>
+
+      </Router>
+
+    </>
   );
 }
 
