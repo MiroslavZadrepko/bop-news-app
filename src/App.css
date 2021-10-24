@@ -24,3 +24,19 @@ div{
 .sport {
     padding: 10px 25px;
 }
+
+.linkDiv {
+    margin-bottom: 5vh;
+}
+
+.articleDiv {
+    width: 50%;
+    margin: auto;
+}
+
+img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
+    margin-bottom: 5vh;
+}

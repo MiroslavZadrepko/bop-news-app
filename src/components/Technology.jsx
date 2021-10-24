@@ -33,7 +33,7 @@ const Technology = () => {
 
             </form>
             <Articles allArticles={allArticles} />
-
+            {console.log('učitava')}
         </>
     );
 }

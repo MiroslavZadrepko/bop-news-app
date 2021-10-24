@@ -1,8 +1,8 @@
 // extra: Add option to sort articles by date of publish (DESC / ASC)
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Technology from "./components/Technology";
-import Sports from "./components/Sports";
+import Technology from "./components/Technology.jsx";
+import Sports from "./components/Sports.jsx";
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
       <h2>Choose category: </h2><br></br>
       <Router>
-        <div>
+        <div className="linkDiv">
           <Link to="/technology">Technology</Link>
           <Link className="sport" to="/sports">Sports</Link>
         </div>
